@@ -1,0 +1,7 @@
+# From https://lists.freedesktop.org/archives/mesa-announce/2018-October/000468.html
+md5 3ad402144c2da93f09910dd2e0fc4017  mesa-18.2.3.tar.xz
+sha1 84c037e8ac53c210e3d74ae010241f781251b72c  mesa-18.2.3.tar.xz
+sha256 e2bf83c17e1abdecb1ee81af22652e27e9aa38f963e95e60f34275cc0376304f  mesa-18.2.3.tar.xz
+sha512 20f512b1f3835b1c78b1f05f2e2125dc3437b61b8857e7ec62e0f9ac3be2ccb5b7ebe7e18f444da1117bc100d75e4b03cd2a0180f0f0b1cf760714b43bc7a664  mesa-18.2.3.tar.xz
+# License
+sha256 630e75b4fdeb75ee2bf9e55db54dd1e3ff7353d52d9314ca8512bfd460f8e24c  docs/license.html
