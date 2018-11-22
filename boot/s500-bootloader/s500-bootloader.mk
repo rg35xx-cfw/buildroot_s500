@@ -3,8 +3,6 @@
 # s500-bootloader
 #
 ################################################################################
-
-#S500_BOOTLOADER_VERSION = a8d7fa1d9a7f353ec4613febf30f4ca99a10a106
 S500_BOOTLOADER_VERSION = master
 S500_BOOTLOADER_SITE = $(call github,aron0330,owl,$(S500_BOOTLOADER_VERSION))
 S500_BOOTLOADER_LICENSE = PROPRIETARY
