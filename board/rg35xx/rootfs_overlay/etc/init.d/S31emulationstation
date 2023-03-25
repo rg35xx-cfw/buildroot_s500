@@ -6,7 +6,11 @@ BOOTCONF="/boot/batocera-boot.conf"
 
 case "$1" in
 	start)
-	    startx &
+	    # We need r/w permissions for log
+	    export HOME=/userdata/system
+	    mkdir /tmp/log
+	    mount -o bind /tmp/log /usr/local/XSGX/var/log
+	    startx -- -nocursor &
 	    ;;
 
 	stop)

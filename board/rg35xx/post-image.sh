@@ -8,6 +8,7 @@ rm -rf "${GENIMAGE_TMP}"
 
 cp "${BOARD_DIR}/uEnv.txt" "${BINARIES_DIR}"
 cp "${BOARD_DIR}/boot_logo.bmp.gz" "${BINARIES_DIR}"
+cp "${BINARIES_DIR}/rootfs.ext2" "${BINARIES_DIR}/boot/batocera"
 
 genimage                           \
 	--rootpath "${TARGET_DIR}"     \

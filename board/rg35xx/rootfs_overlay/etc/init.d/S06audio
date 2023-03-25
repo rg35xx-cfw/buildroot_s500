@@ -7,8 +7,8 @@ case "$1" in
     start)
         alsactl init # init cards with alsa files
         amixer sset 'speaker on off switch' 'on'
-	amixer sset 'DAC1 Digital Fine' 128
-	amixer sset 'DAC PA' 128
+	amixer sset 'DAC FL Gain' 128
+	amixer sset 'DAC PA' 10
     ;;
     stop)
     ;;

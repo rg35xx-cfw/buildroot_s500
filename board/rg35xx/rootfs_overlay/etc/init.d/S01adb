@@ -1,0 +1,11 @@
+#!/bin/sh
+
+
+echo "Starting ADB..."
+
+echo 0 > /sys/monitor/usb_port/config/run
+
+# host -> device
+echo 1 > /sys/monitor/usb_port/config/idpin_debug
+/usbmond.sh USB_A_OUT && /usbmond.sh USB_B_IN
+

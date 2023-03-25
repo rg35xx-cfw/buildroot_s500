@@ -3,7 +3,7 @@
 export LD_LIBRARY_PATH=/usr/local/XSGX/lib:/lib:/usr/lib
 export DISPLAY=:0
 export HOME=/userdata/system
-export SDL_RENDER_DRIVER=opengles
+export SDL_RENDER_DRIVER=opengles2
 cd $HOME
 
 
@@ -23,13 +23,24 @@ touch "${REBOOT_FLAG}" || exit 1
 # environment
 export HOME=/userdata/system
 
-batocera-switch-screen-checker --init
+#batocera-switch-screen-checker --init
+
+/etc/init.d/S35triggerhappy restart
+
+LAUNCHER="emulationstation"
+if [ -f /mnt/sdcard/startRA ]; then
+        LAUNCHER="retroarch"
+fi
 
 GAMELAUNCH=1
 while test -e "${REBOOT_FLAG}"
 do
-    retroarch --verbose
-#    emulationstation --windowed 
+    if test "$LAUNCHER" = "retroarch"
+    then
+        retroarch --verbose
+    else
+        emulationstation --windowed
+    fi
     GAMELAUNCH=0
 done
 exit 0
